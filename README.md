@@ -53,21 +53,19 @@ A： `pscoast` 能够正常运行的前提是：
 
 ---
 
-关于-O和-K选项使用的问答栏给初学者
+Q：如何让刻度线朝向图的内部？
+
+A：将刻度线的长度设置为负值即可。GMT4 用户可以用 `gmtset TICK_LENGTH -0.2c`，GMT5用户可以用 `gmt set MAP_TICK_LENGTH_PRIMARY -5p` 。
 
 ---
 
-如何刻度线朝向图的内部
-gmtset TICK_LENGTH -xx
+Q：如何设置网格线的属性，比如线型、颜色等？
+A：GMT5用户可以用 `gmt set MAP_GRID_PEN_PRIMARY 1p,gray,-` 来修改网格线属性。
 
 ---
 
-如何设置格网线性
-
----
-
-纵坐标能不能反转180°啊，从上到下依次增大
-设置-J的时候把相应轴前面添加负号。-J-2c/4c等等
+Q：如何将纵坐标上下反转，即 Y 轴从上到下依次增大？
+A：设置 `-J` 时把对应轴的长度设置为负值，比如 `-JX10c/-5c` 
 
 ---
 
@@ -85,19 +83,7 @@ ps2raster 或者说 psconvert 本质上是调用了 ghostscript 来实现图片�
 
 ---
 
-如何绘制虚线
-
----
-
-如何绘制指北针
-
----
-
 经纬度表示为度°分′秒″或表示为ddd.x°/在GMT绘图时，如何在经纬度轴上添加上N,E的标注
-
----
-
-现有cpt如何反转颜色
 
 ---
 
@@ -161,20 +147,11 @@ gmtselect
 awk里怎么能把数据按照科学计数法的格式输出，而不是按纯数值。
  AWK printf
 
----
-
-seed转miniseed的软件
-
----
 
 32位XP系统下GMT的安装
 
 ---
 GMT Fatal Error: No SI/US keyword in GMT configuration file <COLOR_BACKGROUND = black>
-
----
-
-安装gshhg后仍不可用
 
 ---
 
